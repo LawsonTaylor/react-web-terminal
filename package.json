@@ -1,8 +1,8 @@
 {
-  "name": "typescript-react-mobx-boilerplate",
+  "name": "WebTerminal",
   "version": "1.0.0",
   "private": true,
-  "description": "A frontend boilerplate with React, MobX and Typescript",
+  "description": "A fun web terminal project build with React, MobX and Typescript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,0 +1,19 @@
+.terminal {
+
+}
+
+.terminalBox {
+  display: flex;
+}
+
+.terminalInput {
+  border: none;
+  height: 100%;
+  width: 100%;
+  resize: none;
+}
+
+.termText {
+  margin: 0;
+  padding-right: 4px;
+}

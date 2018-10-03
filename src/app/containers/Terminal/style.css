@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,700');
 
 html,
 body {
@@ -21,7 +21,8 @@ button {
 }
 
 body {
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 14px 'IBM Plex Mono', monospace;
+  font-weight: 500;
   line-height: 1.4em;
   background: #f5f5f5;
   color: #4d4d4d;
@@ -32,7 +33,6 @@ body {
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  font-weight: 300;
 }
 
 button,
@@ -40,11 +40,13 @@ input[type='checkbox'] {
   outline: none;
 }
 
-.normal {
+.terminal {
   background: #fff;
-  margin: 200px 0 40px 0;
+  margin: 100px 0 40px 0;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  border-radius:  4px 4px 0 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  height: 400px;
 }
 
 .normal input::-webkit-input-placeholder {
