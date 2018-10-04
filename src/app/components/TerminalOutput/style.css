@@ -1,0 +1,21 @@
+.termText {
+  margin: 0;
+  padding-right: 4px;
+}
+
+.terminalBox {
+  display: flex;
+}
+
+.outputData {
+  margin: 0px;
+}
+
+.output {
+  list-style: none;
+  margin: 2px;
+  margin-left: 2px;
+  padding: 0;
+  padding-left: 8px;
+  margin-left: 0px;
+}

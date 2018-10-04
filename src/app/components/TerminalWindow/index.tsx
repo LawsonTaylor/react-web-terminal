@@ -10,6 +10,19 @@ export class TerminalWindow extends React.Component<any, any> {
     this.state = {
       cwd: '~/Documents',
     };
+    this.terminalTyping = this.terminalTyping.bind(this);
+  }
+
+  terminalTyping(e){
+    let text = e.target.value;
+    let charcode = text.charCodeAt(text.length-1);
+
+    if(10 <= charcode && charcode <= 13 ){
+      this.props.evaluateCommand(text);
+      e.target.value = '';
+    } else {
+      
+    }
   }
 
   render() {
@@ -17,8 +30,8 @@ export class TerminalWindow extends React.Component<any, any> {
     return(
       <div className={style.terminalBox}>
         <p className={style.termText}>{termString}</p>
-        <p className={style.termText}>~/Documents$</p>
-        <textarea rows={22} className={style.terminalInput}/>
+        <p className={style.termText}>{this.props.dir}</p>
+        <textarea onKeyUp={this.terminalTyping} rows={1} className={style.terminalInput}/>
       </div>
     );
   }
