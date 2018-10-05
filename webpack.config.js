@@ -29,7 +29,7 @@ module.exports = {
     // (jsnext:main directs not usually distributable es6 format, but es6 sources)
     mainFields: ['module', 'browser', 'main'],
     alias: {
-      'app': path.resolve(__dirname, 'src/app/')
+      app: path.resolve(__dirname, 'src/app/')
     }
   },
   module: {
@@ -76,7 +76,17 @@ module.exports = {
       },
       // static assets
       { test: /\.html$/, use: 'html-loader' },
-      { test: /\.png$/, use: 'url-loader?limit=10000' },
+      {
+        test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name]-[hash:8].[ext]'
+                },
+            },
+        ]
+    },
       { test: /\.jpg$/, use: 'file-loader' }
     ]
   },

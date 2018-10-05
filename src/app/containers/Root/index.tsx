@@ -1,4 +1,5 @@
 import * as React from 'react';
+import AppLauncher from '../../components/AppLauncher';
 
 export class Root extends React.Component<any, any> {
   renderDevTool() {
@@ -13,6 +14,7 @@ export class Root extends React.Component<any, any> {
       <div className="container">
         {this.props.children}
         {this.renderDevTool()}
+        <AppLauncher></AppLauncher>
       </div>
     );
   }
