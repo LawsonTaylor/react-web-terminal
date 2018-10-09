@@ -103,6 +103,18 @@ class Terminal extends React.Component<any, any> {
     this.executeCommand(command);
   }
 
+  componentDidMount() {
+    let lawson = "|¯¯¯¯|  '      /¯¯¯¯¯| \¯¯\     /¯¯/ /¯¯¯¯¯/ '  /¯¯¯¯¯\ |¯¯¯\|¯¯¯| \
+|       |__   /     !     |   \   \/\/   /   \ __¯¯¯\' |     x    |'|            '||\
+|______| /___/¯|__'|     \_/\_/   '  /______/| \_____/ |___|\___| \ ";
+    let outhist = this.state.outputHistory
+    outhist.push(lawson);
+    let cmdhist = this.state.commandHistory;
+    cmdhist.push('show lawson');
+    this.setState({ outputHistory: outhist });
+    this.setState({ commandHistory: cmdhist })
+  }
+
   render() {
     return (
       <div className={style.terminal}>

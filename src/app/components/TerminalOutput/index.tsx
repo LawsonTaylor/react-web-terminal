@@ -22,20 +22,13 @@ class Output extends React.Component<any, any> {
   constructor(props){
     super(props);
   }
+
+
   render() {
-    const data = this.props.data;
-    // const cols = (data.directories + data.files.length) / 3;
-    let all = data.directories.map(dir => { return dir.name + '/'});
-    let files = data.files.map(file => { return file.name});
-    all = all.concat(files);
-    console.log(all);
+
     return (
       <div>
-        <ul className={style.output}>
-        {all.map(item => {
-          return(<li>{item}</li>);
-        })}
-        </ul>
+
       </div>
     );
   }
@@ -51,7 +44,7 @@ export class TerminalOutput extends React.Component<any, any> {
       <div>
         {this.props.commandHistory.map((data, key) => {
           return(<div>
-            <Command key={key} user={this.props.user} dir={this.props.dir} command={data.command}/>
+            <Command key={key} user={this.props.user} dir={this.props.dir} command={data}/>
             <Output data={this.props.outputHistory[key]}></Output>
             <p className={style.outputData}></p>
           </div>);

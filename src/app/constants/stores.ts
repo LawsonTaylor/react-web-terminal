@@ -1,2 +1,2 @@
-export const STORE_TODO = 'todo';
+export const STORE_FILE = 'fs';
 export const STORE_ROUTER = 'router';

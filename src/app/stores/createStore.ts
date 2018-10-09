@@ -1,14 +1,14 @@
 import { History } from 'history';
-import { TodoModel } from 'app/models';
-import { TodoStore } from './TodoStore';
+import { FileModel} from 'app/models';
+import { FileStore } from './FileStore';
 import { RouterStore } from './RouterStore';
-import { STORE_TODO, STORE_ROUTER } from 'app/constants';
+import { STORE_FILE, STORE_ROUTER } from 'app/constants';
 
-export function createStores(history: History, defaultTodos?: TodoModel[]) {
-  const todoStore = new TodoStore(defaultTodos);
+export function createStores(history: History, defaultFS?: FileModel) {
+  const fileStore = new FileStore(defaultFS);
   const routerStore = new RouterStore(history);
   return {
-    [STORE_TODO]: todoStore,
+    [STORE_FILE]: fileStore,
     [STORE_ROUTER]: routerStore
   };
 }
